@@ -1,0 +1,45 @@
+:root{
+    --titulo: #8dcaff;
+    --corpo: #fff;
+    --fundo: aliceblue;
+}
+
+body{
+    background-color: var(--fundo);
+}
+
+/* cabecalho */
+header {
+    background-color: var(--titulo);
+}
+header .container .cabecalho{
+    display: flex;
+    justify-content: space-between;
+}
+
+header .container .cabecalho button{
+    margin: 0 20px;
+}
+
+header .container .cabecalho .input-group{
+    margin: 0 20px;
+}
+
+header .container .cabecalho .input-group button{
+    margin: 0;
+}
+
+/* vocabulário */
+
+.vocabulario{
+    background-color: var(--corpo);
+}
+.vocabulario{
+    margin-top: 30px;
+}
+
+.vocabulario table thead th{
+    background-color: var(--titulo);
+}
+
+
