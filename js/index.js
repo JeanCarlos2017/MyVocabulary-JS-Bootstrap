@@ -20,7 +20,8 @@ fileSelector.addEventListener('change', (event) => {
     })
 });
 
-
+//eventos na tabela
+var table_interaction= new TableMethod();
 
 
 

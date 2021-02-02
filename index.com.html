@@ -22,7 +22,8 @@
                 </div>
 
                 <div class="input-group ">
-                    <input type="text" class="form-control" placeholder= "Pesquise por uma palavra aqui" aria-label="Text input with segmented dropdown button">
+                    <input id="myInput" type="text" class="form-control" placeholder= "Pesquise por uma palavra aqui"
+                           onkeyup="table_interaction.filterWords()" aria-label="Text input with segmented dropdown button">
                     <div class="input-group-prepend">
                         <button type="button" class="btn btn-outline-secondary">
                             <i class="bi bi-search"></i>
@@ -81,6 +82,9 @@
 
 <!-- script Json to table -->
 <script src="js/table/JsonToView.js"></script>
+
+<!-- script para eventos na tabela -->
+<script src="js/table/TableMethods.js"></script>
 
 <!--- script main -->
 <script src="js/index.js"></script>

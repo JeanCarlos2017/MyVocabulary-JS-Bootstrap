@@ -25,8 +25,8 @@ class JsonToView{
                 "<td>"+row["Significado"]+"</td>"+
                 "<td>"+row["Pronuncia GG"]+"</td>"+
                 "<td>"+this.formatDate(row["Data aprendizado"])+"</td>"+
-                "<td> <button onclick=\"\" type=\"button\" class=\"btn btn-outline-secondary\" ><i class=\"bi bi-trash\"></i></button></td>"+
-                "<td>  <button onclick=\"\" type=\"button\" class=\"btn btn-outline-secondary\" ><i class=\"bi bi-pencil\"></i> </button></td>"+
+                "<td> <button onclick=\"table_interaction.deleteRow()\" type=\"button\" class=\"btn btn-outline-secondary\" ><i class=\"bi bi-trash\"></i></button></td>"+
+                "<td>  <button onclick=\"table_interaction.editRow()\" type=\"button\" class=\"btn btn-outline-secondary\" ><i class=\"bi bi-pencil\"></i> </button></td>"+
               "</tr>";
         //$(this.idView).find('tbody').append(rowTable);
         $("#vocabularioView tr:last").after(rowTable);
