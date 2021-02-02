@@ -13,7 +13,9 @@ class LeitorArquivoXLSX{
             reader.onload = function (e) {
                 var data = e.target.result;
                 var workbook = XLSX.read(data, {
-                    type: 'binary'
+                    type: 'binary',
+                    cellDates:true,
+                    dateNF:'dd.mm.yyyy'
                 });
                 var dadosToJson = [];
                 workbook.SheetNames.forEach(function (sheetName) {
