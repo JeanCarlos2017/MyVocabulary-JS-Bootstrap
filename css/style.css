@@ -42,4 +42,25 @@ header .container .cabecalho .input-group button{
     background-color: var(--titulo);
 }
 
+/* section addPalavra */
+.addPalavra{
+    z-index: 1;
+    /* posição */
+    top: 5%;
+    left: 55%;
+    display: none;
+    position: absolute;
+}
+.addPalavra .container{
+    border: 2px solid var(--titulo);
+    border-radius: 5px;
+    padding: 20px;
+    background-color: white;
+
+}
+.addPalavra .container form .row{
+    margin-top: 5px;
+}
+
+
 

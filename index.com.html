@@ -41,7 +41,7 @@
                     </div>
                 </div>
 
-                <button onclick="" type="button" class="btn btn-outline-secondary" ><i class="bi bi-file-earmark-plus"></i> </button>
+                <button onclick="table_interaction.openWordTable()" type="button" class="btn btn-outline-secondary" ><i class="bi bi-file-earmark-plus"></i> </button>
                 <button onclick="" type="button" class="btn btn-outline-secondary" ><i class="bi bi-graph-up"></i> </button>
             </div>
         </div>
@@ -65,6 +65,41 @@
 
             </tbody>
         </table>
+    </section>
+
+    <section class="addPalavra" id="painelPalavra" >
+        <div class="container">
+            <form>
+                <div class="row">
+                    <div class="col">
+                        <input type="text" id="inputPalavra" class="form-control" placeholder="Palavra">
+                    </div>
+                    <div class="col">
+                        <input type="text" id="inputSignificado" class="form-control" placeholder="Significado">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <input type="text" id="inputPronunciaGG" class="form-control" placeholder="Pronúncia GG">
+                    </div>
+                    <div class="col">
+                        <input type="text" id="inputPronunciaBR" class="form-control" placeholder="Proníncia BR">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <button onclick="table_interaction.closeAddWord()" type="button" class="btn btn-outline-secondary" >
+                           Cancelar
+                        </button>
+                    </div>
+                    <div class="col">
+                        <button onclick="table_interaction.addWordTable()" type="button" class="btn btn-outline-secondary" >
+                            Salvar
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
     </section>
 
 
