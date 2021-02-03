@@ -35,18 +35,18 @@ class TableMethod{
         //forma o objeto com os campos digitados no formulário
         let row= [
             {
-                "Palavras ": document.getElementById("inputPalavra").value,
+                "Palavras": document.getElementById("inputPalavra").value,
                 "Significado": document.getElementById("inputSignificado").value,
                 "Pronuncia GG": document.getElementById("inputPronunciaGG").value,
                 "Pronuncia BR":  document.getElementById("inputPronunciaBR").value,
                 "Data aprendizado": new Date()
             }
         ]
-        //let countRow = document.getElementById("tableView").rows.length;
         let jsonToView= new JsonToView("tableView");
         jsonToView.toView(JSON.stringify(row));
         //chama função que salva a tabela em um arquivo
-
+        let fileXLSX= new FileXLSX();
+        fileXLSX.saveFile();
         //some elemento
         this.viewAddRow();
 
