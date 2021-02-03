@@ -2,18 +2,15 @@ class JsonToView{
     //recebe um JSON, converte para array e joga para uma tabela
     //recebe a div que eu vou por os dados - vocabularioView
 
-    constructor(dataJson, idView) {
-        this.data = dataJson;
+    constructor(idView) {
         this.idView = idView;
-        this.toView();
     }
 
-    toView = function(){
-        this.data = JSON.parse(this.data); //json to array
-        //console.log(this.data);
+    toView = function(dataJson){
+        let data = JSON.parse(dataJson); //json to array
         let countRow = document.getElementById(this.idView).rows.length;
-        for( let d in this.data){
-           this.appendRow(this.data[d], countRow);
+        for( let d in data){
+           this.appendRow(data[d], countRow);
            countRow++;
        }
     }
@@ -34,9 +31,7 @@ class JsonToView{
 
     formatDate(dateIn){
         let date = new Date(dateIn);
-        let formattedDate= ((date.getDate() )) + "/" + ((date.getMonth() + 1)) + "/" + date.getFullYear();
-        return formattedDate;
-        //return date;
+        return ((date.getDate() )) + "/" + ((date.getMonth() + 1)) + "/" + date.getFullYear();
     }
 
 

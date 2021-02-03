@@ -4,7 +4,7 @@
 const fileSelector = document.getElementById('file-selector');
 fileSelector.addEventListener('change', (event) => {
     let leitor_arquivoXLSX;
-    let toView;
+    let jsonToView= new JsonToView("tableView");
     const fileList = event.target.files;
     //chamar o leitorArquivoXLSX
     leitor_arquivoXLSX = new LeitorArquivoXLSX(fileList[0]);
@@ -15,7 +15,7 @@ fileSelector.addEventListener('change', (event) => {
         //chamar JsonToView -- jogar os dados JSON na tabela
         data.forEach( d=>{
             //cada planilha do arquivo Excel assume uma posição do array data
-            toView = new JsonToView(d,"tableView");
+            jsonToView.toView(d);
         })
     })
 });
