@@ -42,7 +42,7 @@
                 </div>
 
                 <button onclick="table_interaction.openWordTable()" type="button" class="btn btn-outline-secondary" ><i class="bi bi-file-earmark-plus"></i> </button>
-                <button onclick="" type="button" class="btn btn-outline-secondary" ><i class="bi bi-graph-up"></i> </button>
+                <button onclick="reportView.reportView()" type="button" class="btn btn-outline-secondary" ><i class="bi bi-graph-up"></i> </button>
             </div>
         </div>
     </header>
@@ -104,6 +104,27 @@
         </div>
     </section>
 
+    <section class="relatorio" id="relatorioId">
+        <div class="container">
+            <table class="table table-hover" id="tableReport">
+                <thead class="thead">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Dia</th>
+                    <th scope="col">Quantidade Palavras Aprendidas</th>
+                </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+            <button onclick="reportView.closeReportView()" type="button" class="btn btn-outline-secondary" >
+                Fechar Relatório
+            </button>
+        </div>
+
+    </section>
+
 
 </body>
 </html>
@@ -126,6 +147,10 @@
 
 <!-- script para eventos na tabela -->
 <script src="js/table/TableMethods.js"></script>
+
+<!-- script para relatorio -->
+<script src="js/relatorio/DataCollector.js"></script>
+<script src="js/relatorio/ReportView.js"></script>
 
 <!--- script main -->
 <script src="js/index.js"></script>

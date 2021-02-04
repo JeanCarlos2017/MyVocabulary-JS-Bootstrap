@@ -62,5 +62,34 @@ header .container .cabecalho .input-group button{
     margin-top: 5px;
 }
 
+/* section relatorio */
+.relatorio{
+    z-index: 1;
+    /* posição */
+    top: 5%;
+    left: 55%;
+    display: none;
+    position: absolute;
+}
 
+.relatorio .container{
+    border: 2px solid var(--titulo);
+    border-radius: 5px;
+    padding: 20px;
+    background-color: white;
 
+}
+
+.relatorio .container table td{
+    text-align: end;
+}
+
+/* warning*/
+.alert-warning{
+    position: absolute;
+    top: 5%;
+    left:20%;
+    width: 60%;
+    z-index: 1;
+
+}
