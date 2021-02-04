@@ -4,7 +4,8 @@ class TableMethod{
         this.idTable = "tableView";
         this.idAddWord= "painelPalavra";
         this.visibileRow = false;
-
+        this.countWords = 0;
+        this.limitWords= 10; //depois que atingir o limite de palavras sem salvar o usuário é alertado
     }
 
     //funções para fazer filtro de palavras
@@ -30,7 +31,6 @@ class TableMethod{
 
 
     addWordTable(){
-        console.log("addWordTable ainda não está suportado");
         //adiciona palavra
         //forma o objeto com os campos digitados no formulário
         let row= [
@@ -44,14 +44,17 @@ class TableMethod{
         ]
         let jsonToView= new JsonToView("tableView");
         jsonToView.toView(JSON.stringify(row));
-        //chama função que salva a tabela em um arquivo
-        let fileXLSX= new FileXLSX();
-        fileXLSX.saveFile();
+        //incrementa a quantidade de palavras sem salvar
+        this.countWords++;
+        if( this.countWords === this.limitWords ){
+            alert("Você já tem "+ this.limitWords+" palavras sem salvar!");
+            this.countWords= 0;
+        }
+
         //some elemento
         this.viewAddRow();
 
     }
-
     openWordTable(){
        this.viewAddRow();
 

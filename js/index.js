@@ -19,7 +19,10 @@ fileSelector.addEventListener('change', (event) => {
         })
     })
 });
-
+//salvar arquivo
+var fileXLSX = new FileXLSX();
 //eventos na tabela
 var table_interaction= new TableMethod();
 
+//reportView
+var reportView = new ReportView();
