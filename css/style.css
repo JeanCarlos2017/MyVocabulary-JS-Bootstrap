@@ -84,6 +84,11 @@ header .container .cabecalho .input-group button{
     text-align: end;
 }
 
+.relatorio .container p{
+    display: flex;
+    justify-content: space-between;
+}
+
 /* warning*/
 .alert-warning{
     position: absolute;

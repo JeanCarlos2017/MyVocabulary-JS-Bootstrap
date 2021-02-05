@@ -3,6 +3,7 @@ class ReportView{
     constructor(){
         this.idTable= "tableReport";
         this.idSection= "relatorioId";
+        this.idTotal= "showTotal";
 
     }
 
@@ -23,6 +24,10 @@ class ReportView{
                 this.appendRow(row);
                 //this.addRow(row);
             }
+            let total= dataCollector.vectorCount.reduce(function (total, numero){
+                return total + numero;
+            }, 0);
+            document.getElementById(this.idTotal).innerText= total;
         }
     }
     addRow(row) {
