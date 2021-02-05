@@ -55,7 +55,14 @@ class TableMethod{
         this.viewAddRow();
 
     }
+    cleanFields(){
+        document.getElementById("inputPalavra").value= "";
+        document.getElementById("inputSignificado").value="";
+        document.getElementById("inputPronunciaGG").value="";
+        document.getElementById("inputPronunciaBR").value= "";
+    }
     openWordTable(){
+       this.cleanFields();
        this.viewAddRow();
 
     }
