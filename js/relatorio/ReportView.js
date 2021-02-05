@@ -8,6 +8,7 @@ class ReportView{
 
     reportView(){
         this.viewReportSection();
+        this.clearTable();
         //dataCollector
         let dataCollector = new DataCollector();
         if (document.getElementById(this.idSection).style.display === "block") {
@@ -45,6 +46,12 @@ class ReportView{
         $("#tableReport tr:last").after(rowTable);
     }
 
+    clearTable(){
+        let  linhas = document.getElementById(this.idTable).rows;
+        for (let i = linhas.length-1; i > 0; i--){
+           document.getElementById(this.idTable).deleteRow(i);
+        }
+    }
     closeReportView(){
         this.viewReportSection();
     }
