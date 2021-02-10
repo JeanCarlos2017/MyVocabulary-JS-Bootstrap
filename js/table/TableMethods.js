@@ -71,11 +71,23 @@ class TableMethod{
     }
     deleteRow(){
         console.log("deleteRow ainda não está suportado");
+        $("#tableView tbody tr td button").click(function(event){
+            event.stopImmediatePropagation();
+            let windowConfirm = confirm("Tem certeza que deseja remover essa linha?");
+            if(windowConfirm === true) {
+                //com a confirmação do usuário, eu removo 
+                $(this).parent().parent().remove();
+            }
+            event.stopImmediatePropagation();
+            if(event.isImmediatePropagationStopped()){
+                //evita que o evento seja propagado
+                event.stopImmediatePropagation();
+            }
+        })
+
     }
 
-    editRow(){
-        console.log("editRow ainda não está suportado")
-    }
+
 
     viewAddRow(){
         const elem = document.getElementById(this.idAddWord);
