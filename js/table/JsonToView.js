@@ -25,8 +25,7 @@ class JsonToView{
                 "<td>"+this.formatRow(row["Pronuncia BR"])+"</td>"+
                 "<td>"+this.formatDate(row["Data aprendizado"])+"</td>"+
                 "<td> <button onclick=\"table_interaction.deleteRow()\" type=\"button\" class=\"btn btn-outline-secondary\" ><i class=\"bi bi-trash\"></i></button></td>"+
-                "<td>  <button onclick=\"table_interaction.editRow()\" type=\"button\" class=\"btn btn-outline-secondary\" ><i class=\"bi bi-pencil\"></i> </button></td>"+
-              "</tr>";
+                "</tr>";
         $("#vocabularioView").find('tbody').append(rowTable);
         //this.newRow(row, id);
         //$("#vocabularioView tr:last").after(rowTable);
