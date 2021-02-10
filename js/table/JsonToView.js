@@ -13,6 +13,7 @@ class JsonToView{
            this.appendRow(data[d], countRow);
            countRow++;
        }
+       this.eventEdit();
     }
 
     appendRow(row, id){
@@ -26,8 +27,21 @@ class JsonToView{
                 "<td> <button onclick=\"table_interaction.deleteRow()\" type=\"button\" class=\"btn btn-outline-secondary\" ><i class=\"bi bi-trash\"></i></button></td>"+
                 "<td>  <button onclick=\"table_interaction.editRow()\" type=\"button\" class=\"btn btn-outline-secondary\" ><i class=\"bi bi-pencil\"></i> </button></td>"+
               "</tr>";
-        //$(this.idView).find('tbody').append(rowTable);
-        $("#vocabularioView tr:last").after(rowTable);
+        $("#vocabularioView").find('tbody').append(rowTable);
+        //this.newRow(row, id);
+        //$("#vocabularioView tr:last").after(rowTable);
+
+    }
+
+    eventEdit(){
+        $("#vocabularioView tbody tr td").dblclick(function(){
+            let conteudoOriginal= $(this).text();
+            let input= $('<input>', {type: 'text', value: conteudoOriginal});
+            $(this).html(input.blur(function(){
+                let conteudoNovo= $(this).val();
+                $(this).parent().html(conteudoNovo);
+            }));
+        });
     }
 
     formatDate(dateIn){
