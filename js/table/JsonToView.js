@@ -35,11 +35,25 @@ class JsonToView{
 
     eventEdit(){
         $("#vocabularioView tbody tr td").dblclick(function(){
+            if( $('td > input').length > 0){
+                //permito editar apenas um elemento por vez
+                return;
+            }
+            //com um duplo clique no campo eu edito elemento da tabela
             let conteudoOriginal= $(this).text();
             let input= $('<input>', {type: 'text', value: conteudoOriginal});
-            $(this).html(input.blur(function(){
-                let conteudoNovo= $(this).val();
-                $(this).parent().html(conteudoNovo);
+            $(this).html(input.bind('blur keydown', function(event){
+                if (event.key === "Enter"){
+                    //finaliza quando teclo enter
+                    let conteudoNovo= $(this).val();
+                    if(conteudoNovo !== ""){
+                        $(this).parent().html(conteudoNovo);
+                    }
+                 }
+                if(event.type === "blur"){
+                    //quando o elemento perder o foco volto com o conteudo antigo
+                    $(this).parent().html(conteudoOriginal);
+                }
             }));
         });
     }
