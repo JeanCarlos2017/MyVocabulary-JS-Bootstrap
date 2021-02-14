@@ -24,10 +24,9 @@ class ReportView{
                 this.appendRow(row);
                 //this.addRow(row);
             }
-            let total= dataCollector.vectorCount.reduce(function (total, numero){
+            document.getElementById(this.idTotal).innerText= dataCollector.vectorCount.reduce(function (total, numero) {
                 return total + numero;
             }, 0);
-            document.getElementById(this.idTotal).innerText= total;
         }
     }
     addRow(row) {
@@ -48,7 +47,8 @@ class ReportView{
             "<td>"+row["Dia"]+"</td>"+
             "<td>"+row["Quantidade Palavras Aprendidas"]+"</td>"+
             "</tr>";
-        $("#tableReport tr:last").after(rowTable);
+        if(row["id"] === '0') $("#tableReport tbody").append(rowTable);
+        else $("#tableReport tbody tr:first").before(rowTable);
     }
 
     clearTable(){
