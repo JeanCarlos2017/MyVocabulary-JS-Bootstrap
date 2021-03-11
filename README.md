@@ -5,8 +5,8 @@
 O EnglishStudy é um sistema em construção que permite o usuário criar uma tabela com o seu vocabulário de Inglês, exibindo cada palavra aprendida, o seu significado, a pronúncia segundo o Google tradutor, o modo como usuário a pronúncia da palavra e a data em que aprendeu o termo. 
 
 ## Como usar o sistema 
-Você pode assistir um vídeo do YouTube de como usar o sistema clicando [aqui](https://youtu.be/ALV6mLuq7cE).
-Como também pode ver a apresentação powerpoint de como usar o projeto que está presente no repositório
+1. Você pode assistir um vídeo do YouTube de como usar o sistema clicando [aqui](https://youtu.be/ALV6mLuq7cE).
+2. Como também pode ver a apresentação powerpoint de como usar o projeto que está presente no repositório
 
 ## Funcionalidades do sistema até o momento
 - [x] O sistema faz a leitura de planilhas do Excel no formato XLSX
