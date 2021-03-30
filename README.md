@@ -1,8 +1,8 @@
-# EnglishStudy-JS-Bootstrap
+# MyVocabulary-JS-Bootstrap
 
 ![image](https://user-images.githubusercontent.com/34510146/110791349-db1c6d80-8250-11eb-939e-6b82c41ca4e2.png)
 
-O EnglishStudy é um sistema em construção que permite o usuário criar uma tabela com o seu vocabulário de Inglês, exibindo cada palavra aprendida, o seu significado, a pronúncia segundo o Google tradutor, o modo como usuário faz a sua pronúncia e a data em que aprendeu o termo. 
+O MyVocabulary é um sistema em construção que permite o usuário criar uma tabela com o seu vocabulário de Inglês, exibindo cada palavra aprendida, o seu significado, a pronúncia segundo o Google tradutor, o modo como usuário faz a sua pronúncia e a data em que aprendeu o termo. 
 
 ## Como usar o sistema 
 1. Você pode assistir um vídeo do YouTube de como usar o sistema clicando [aqui](https://youtu.be/ALV6mLuq7cE).
